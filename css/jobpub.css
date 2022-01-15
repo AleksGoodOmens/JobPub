@@ -1,0 +1,163 @@
+
+/* div, header, nav, ul, section{
+    border: 0.5px solid var(--secondary-clr);
+} */
+
+/* 
+==========================
+    STYLE START HERE
+==========================
+ */
+/*
+==============================
+This section was referenced in
+all through the styles sheet.
+==============================
+ */
+:root{
+    /*Font family*/
+    --ff: sans-serif;
+
+    /*Font size*/
+    --fs-p: 12px;
+    --fs-2: calc(var(--fs-p) * 0.5);
+
+    /*Font weight*/
+    --fw-n:300;
+    --fw-m:600;
+    --fw-b:800;
+
+    /*Font colour*/
+    --fc: white;
+
+    /*elements colour*/
+    /* --primary-clr: var(--fc)); */
+    --color-white: #FFF;
+    --color-grey-dark: #7D7C7D;
+    --color-purple: #7B61FF;
+    --color-orange: #EC8E00;
+    --color-yellow-lighter: #FFFFD6;
+    --color-green-lighter: #D8FFCA;
+    --color-blue-lighter: #7FFFFF;
+
+    /*border radios*/
+    --br: 20px;
+
+}
+
+/*
+==========================
+MENU  
+==========================
+*/
+
+/*
+====================
+    HOME PAGE
+====================
+*/
+.section {
+    background-color: var(--color-white);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    
+    place-items: center;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+/* 
+=========================
+    SECTION TITLE
+=========================
+*/
+h4 {
+    display: block;
+    color: #EC8E00;
+
+    background-color: var(--color-white);
+    border: 1px solid  var(--color-orange);
+    border-radius: var(--br);
+
+    font-size: calc(var(--fs-p)*1);
+    
+    text-align: center;
+    align-items: center;
+}
+
+
+/*
+==========================
+        RESPONSIVE
+==========================
+*/
+
+@media (max-width: 600px){
+    .section {
+        max-height: 100vh;
+        max-width: 100%;
+        align-items: center;
+    }
+}
+
+
+.row{
+    display: inline-flex;
+    gap:10px;
+}
+.form{
+    margin: 20px 0;
+    background-image: 
+        linear-gradient(
+            -135deg,
+            var(--color-blue-lighter),
+            var(--color-green-lighter)
+        );
+    border: 1px solid var(--color-orange);
+    border-radius: var(--br);
+    padding: 2em;
+}
+label{
+    color: var(--color-orange);
+}
+input{
+    border-radius: var(--br);
+    border: 1px solid var(--color-orange);
+    
+}
+::placeholder{
+    color: var(--color-grey-dark);
+    font-style: italic;
+    padding: 5px;
+}
+/*
+==========================
+        Footer
+==========================
+*/
+.footer{
+    background-color: var(--color-orange);
+    width: 100vw;
+    margin-bottom: 0;
+    padding: 20px;
+}
+.footer-info{
+    padding-right: 20px;
+    list-style: none;
+}
+.footer-info li{
+padding-bottom: 5px;
+font-weight: lighter;
+font-style: italic;
+text-align: right;
+font-size: 12px;
+font-kerning: 3rem;
+}
+.footer p{
+    text-align: center;
+    font-size: 10px;
+}

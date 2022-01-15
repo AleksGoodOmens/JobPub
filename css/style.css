@@ -1,0 +1,573 @@
+@charset "UTF-8";
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #000;
+  line-height: 1;
+  font-family: "";
+  font-size: 1rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "";
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.lock body {
+  overflow: hidden;
+  touch-action: none;
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.wrapper > main {
+  flex: 1 1 auto;
+}
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стили будут применяться ко 
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+[class*=__container] {
+  max-width: 91.875rem;
+  box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+[class*=-ibg] {
+  position: relative;
+}
+[class*=-ibg] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+[class*=-ibg_contain] img {
+  object-fit: contain;
+}
+
+.wrapper {
+  font-family: Roboto;
+}
+
+.page-header {
+  margin-bottom: 15px;
+}
+.page-header__title {
+  color: #EC8E00;
+  font-size: 2.25rem;
+  line-height: 116%;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.header {
+  background-color: #7D7C7D;
+}
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.header__nav {
+  flex-grow: 1;
+  margin: 0 4rem;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__link-view {
+  background-color: white;
+}
+
+.logo-header {
+  background: linear-gradient(263.28deg, #7FFFFF 0%, rgba(216, 255, 202, 0.97) 100%);
+  padding: 18px 36px;
+}
+.logo-header__text {
+  font-weight: 900;
+  font-size: 4.25rem;
+  line-height: 117%;
+  color: #7B61FF;
+}
+
+.nav-header-links {
+  color: #7FFFFF;
+  font-size: 1.5rem;
+}
+.login-header {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  color: #EC8E00;
+  margin: 10px 0;
+  flex-basis: 200px;
+  flex-shrink: 0;
+  justify-content: space-around;
+  border-radius: 25% 25% 25% 25%/50% 50% 50% 50%;
+}
+.icon-menu {
+  display: none;
+}
+@media (max-width: 47.99875em) {
+  .icon-menu {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+  }
+  .icon-menu span, .icon-menu::before, .icon-menu::after {
+    content: "";
+    transition: all 0.3s ease 0s;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+  .icon-menu::before {
+    top: 0px;
+  }
+  .icon-menu::after {
+    bottom: 0px;
+  }
+  .icon-menu span {
+    top: calc(50% - 1px);
+  }
+  .menu-open .icon-menu span {
+    transform: scale(0);
+  }
+  .menu-open .icon-menu::before {
+    transform: rotate(-45deg);
+    top: calc(50% - 1px);
+  }
+  .menu-open .icon-menu::after {
+    transform: rotate(45deg);
+    bottom: calc(50% - 1px);
+  }
+}
+
+.footer {
+  padding: 150px 30px 30px 30px;
+  background-color: #EC8E00;
+}
+.footer__text {
+  color: white;
+}
+.linksNav {
+  padding: 35px 0;
+  text-transform: capitalize;
+  color: #7D7C7D;
+  font-weight: 600;
+}
+.header__link-view :last-child {
+  color: black;
+  font-weight: 900;
+}
+.header__link-view :hover {
+  color: black;
+}
+
+.content-main {
+  display: flex;
+}
+.content-main__navigation {
+  max-width: 244px;
+  width: 100%;
+}
+.content-main__body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.content-main__body > * {
+  flex: 1 1 50%;
+}
+
+.navigation-main {
+  background: rgba(216, 255, 202, 0.97);
+  flex: 0 0 244px;
+}
+.navigation-main__item {
+  display: block;
+  margin-bottom: 10px;
+}
+.navigation-main__link {
+  background: #FFFFD6;
+  max-width: 200px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.navigation-main__link:hover {
+  box-shadow: 0 0 1px 1px #7fff;
+  max-width: 100%;
+  font-weight: 900;
+  letter-spacing: 0.08rem;
+  transition: all 0.3s;
+  background: #f5f5ac;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.navigation-main__img {
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+}
+.navigation-main__img img {
+  width: 30px;
+  height: 30px;
+}
+
+.body-main-content__forum {
+  flex: 1 1 30%;
+  min-width: 200px;
+  padding: 0 0 30px 30px;
+}
+
+.content-forum {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding: 1px;
+  overflow-y: auto;
+}
+.content-forum::-webkit-scrollbar {
+  display: none;
+}
+.content-forum__item {
+  display: flex;
+  align-items: center;
+  background: #ffffd6;
+  border-radius: 20px;
+  margin: 0 1px;
+  border: 1px solid #ffffd6;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 8px;
+  gap: 8px;
+  transition: all ease 0.3s;
+}
+.content-forum__item:hover {
+  background: #f5f5ac;
+  transition: all ease 0.3s;
+}
+.content-forum__img {
+  flex: 0 0 50px;
+  background-color: blanchedalmond;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 50px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.text-forum-content__title {
+  font-size: 0.562rem;
+  line-height: 122%;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ec8e00;
+  margin-bottom: 5px;
+}
+.text-forum-content__message {
+  font-size: 1.25rem;
+  line-height: 116%;
+  color: #5d5c5e;
+  margin-bottom: 5px;
+}
+.text-forum-content__date {
+  font-size: 0.562rem;
+  line-height: 122%;
+  text-transform: uppercase;
+  color: #ec8e00;
+}
+
+.body-main-content__job-vacancies {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 70%;
+  padding: 0px 0px 30px 30px;
+}
+
+.body-vacancies__body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  flex-grow: 1;
+}
+
+.vacancies-item {
+  flex: 1 1 49%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all ease 0.3s;
+}
+.vacancies-item:nth-child(odd) {
+  border: 2px solid #7dffff;
+}
+.vacancies-item:nth-child(odd):hover {
+  background: #d8ffca;
+  transition: all ease 0.3s;
+  box-shadow: 1px 1px 1px 1px #7dffff;
+}
+.vacancies-item:nth-child(odd) img {
+  border: 1px solid #7dffff;
+}
+.vacancies-item:nth-child(even) {
+  border: 2px solid #d8ffca;
+}
+.vacancies-item:nth-child(even):hover {
+  background: #7dffff;
+  box-shadow: 1px 1px 1px 1px #d8ffca;
+  transition: all ease 0.3s;
+}
+.vacancies-item:nth-child(even) img {
+  border: 1px solid #d8ffca;
+}
+.vacancies-item__content {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 10px;
+}
+.vacancies-item__img {
+  align-self: stretch;
+  flex: 1 1 20%;
+}
+.text-vacancies {
+  color: #7d7c7d;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.text-vacancies__title {
+  color: black;
+  font-size: 1.125rem;
+  line-height: 116%;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.text-vacancies__subtitle {
+  flex-grow: 1;
+  font-size: 0.875rem;
+  line-height: 116%;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.text-vacancies__sallary {
+  font-size: 0.75rem;
+  line-height: 116%;
+  margin-bottom: 0.5rem;
+}
+.sallary-item {
+  display: flex;
+  gap: 1rem;
+}
+.sallary-item__currency {
+  display: flex;
+  gap: 0.5rem;
+}
+.sallary-item__currency::before {
+  content: url("../img/main/job_vacancies/3.jpg");
+}
+.statistic-item {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  line-height: 116%;
+}
+.statistic-item__location {
+  display: flex;
+  gap: 1rem;
+}
+.statistic-item__location::before {
+  content: url("../img/main/job_vacancies/2.svg");
+}
+.statistic-item__dateOfPosted {
+  display: flex;
+  gap: 1rem;
+}
+.statistic-item__dateOfPosted::before {
+  content: url("../img/main/job_vacancies/1.svg");
+}
+
+.body-main-content__resorces {
+  padding: 0 0 30px 30px;
+}
+
+.body-resorces {
+  flex: 1 1 100%;
+  padding: 25px 25px 60px 30px;
+  background: linear-gradient(216.06deg, #7DFFFF 0%, rgba(216, 255, 202, 0.97) 98.36%);
+}
+.body-resorces__items {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.body-resorces__item {
+  flex: 1 1 30%;
+  color: #5D5C5E;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #C4C4C4;
+  padding: 25px;
+  transition: all ease 0.3s;
+}
+.body-resorces__item:hover {
+  background: linear-gradient(216.06deg, #7DFFFF 0%, rgba(216, 255, 202, 0.97) 98.36%);
+  transition: all ease 0.3s;
+  box-shadow: 1px 1px 1px 1px #C4C4C4;
+}
+
+.item-resorces {
+  font-size: 1.875rem;
+}
+.item-resorces__top {
+  margin-bottom: 30px;
+}
+.item-resorces__middle {
+  margin-bottom: 15px;
+  color: #EC8E00;
+}
+.item-resorces__bottom {
+  font-size: 1.56rem;
+}
+
+.body-main-content__news {
+  flex: 1 1 70%;
+  padding: 30px 0 30px 30px;
+}
+
+.items-news {
+  display: flex;
+  gap: 15px;
+  color: #fff;
+  flex-wrap: wrap;
+}
+.items-news__item {
+  flex: 1;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px 25px;
+  transition: all ease 0.3s;
+}
+.items-news__item:hover {
+  background: linear-gradient(216.06deg, #7DFFFF 0%, rgba(216, 255, 202, 0.97) 98.36%);
+  transition: all ease 0.3s;
+  box-shadow: 1px 1px 1px 1px #C4C4C4;
+  color: black;
+}
+
+.item-news__title {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
+.item-news__text {
+  font-size: 0.8125rem;
+}
+
+.body-main-content__faq {
+  flex: 1 1 30%;
+}
+
+.faq-body {
+  padding: 30px 25px 60px 30px;
+}
+.faq-body__title {
+  text-transform: uppercase;
+}
+.items-faq__item {
+  background: #FFFFD6;
+  padding: 40px 25px;
+  transition: all ease 0.3s;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.items-faq__item:hover {
+  background: #f7f77e;
+  transition: all ease 0.3s;
+  box-shadow: 1px 1px 1px 1px #C4C4C4;
+}
