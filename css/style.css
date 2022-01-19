@@ -360,6 +360,48 @@ h6 {
   color: #ec8e00;
 }
 
+.body-form {
+  padding: 0;
+}
+
+.forum-form {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  max-width: 500px;
+  background: linear-gradient(216.06deg, #7DFFFF 0%, rgba(216, 255, 202, 0.97) 98.36%);
+  padding: 30px 15px;
+  gap: 10px;
+  border-radius: 20px;
+}
+.forum-form__textarea {
+  grid-column: span 6;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.forum-form__name {
+  grid-column: span 3;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.forum-form__surname {
+  grid-column: span 3;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.forum-form__button {
+  grid-column: span 6;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  background-color: #FFFFD6;
+  border: 1px solid white;
+  box-shadow: 0px 1px 2px 2px #fff;
+  border-radius: 20px;
+}
+.forum-form__button:hover {
+  background-color: #EC8E00;
+}
+
 .body-main-content__job-vacancies {
   display: flex;
   flex-direction: column;
