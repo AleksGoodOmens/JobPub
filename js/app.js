@@ -47,7 +47,13 @@
         document.dispatchEvent(e);
       });
     }
-  }, 0),
+  }, 0);
+  const c = document.querySelector("#hide"),
+    i = document.querySelector(".content-main__navigation");
+  c &&
+    c.addEventListener("click", function (e) {
+      i.classList.toggle("_open");
+    }),
     (window.FLS = !0),
     (function (e) {
       let t = new Image();
